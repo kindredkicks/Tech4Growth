@@ -12,9 +12,12 @@ if (savedTheme === 'dark') {
 }
 
 if (toggle) {
+  toggle.setAttribute('aria-pressed', String(root.classList.contains('dark')));
   toggle.addEventListener('click', () => {
     root.classList.toggle('dark');
-    localStorage.setItem('t4g-theme', root.classList.contains('dark') ? 'dark' : 'light');
+    const dark = root.classList.contains('dark');
+    toggle.setAttribute('aria-pressed', String(dark));
+    localStorage.setItem('t4g-theme', dark ? 'dark' : 'light');
   });
 }
 
@@ -24,9 +27,7 @@ triggers.forEach((trigger) => {
     const panel = trigger.nextElementSibling;
     const expanded = trigger.getAttribute('aria-expanded') === 'true';
     trigger.setAttribute('aria-expanded', String(!expanded));
-    if (panel) {
-      panel.classList.toggle('open');
-    }
+    if (panel) panel.classList.toggle('open');
   });
 });
 
@@ -44,4 +45,24 @@ filterButtons.forEach((button) => {
       card.hidden = !matches;
     });
   });
+});
+
+const metricNodes = document.querySelectorAll('[data-count]');
+metricNodes.forEach((node) => {
+  const target = Number(node.dataset.count || 0);
+  const duration = 900;
+  const stepTime = 25;
+  const steps = Math.ceil(duration / stepTime);
+  const inc = target / steps;
+  let current = 0;
+
+  const timer = setInterval(() => {
+    current += inc;
+    if (current >= target) {
+      node.textContent = String(target);
+      clearInterval(timer);
+      return;
+    }
+    node.textContent = String(Math.floor(current));
+  }, stepTime);
 });

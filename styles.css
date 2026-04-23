@@ -300,3 +300,23 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+.metric {
+  text-align: center;
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.faq .card {
+  margin-bottom: 0.8rem;
+}
+
+.form-note {
+  margin-top: 0;
+  color: var(--muted);
+}
