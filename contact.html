@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Tech4Growth | Growth Marketing & AI Automation Enquiries</title>
+    <meta
+      name="description"
+      content="Contact Tech4Growth for growth marketing consulting, AI automation systems, and performance marketing strategy."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tech4growth.com/contact.html" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="index.html">Tech4Growth</a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="btn btn-small" type="button">Toggle theme</button>
+      </div>
+    </header>
+
+    <main id="main-content" class="container page-content">
+      <h1>Contact Tech4Growth</h1>
+      <p>
+        Tell us about your business goals. We’ll review your enquiry and share next steps for growth marketing and AI
+        automation support.
+      </p>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-grid">
+          <div>
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" required autocomplete="given-name" />
+          </div>
+          <div>
+            <label for="surname">Surname *</label>
+            <input id="surname" name="surname" type="text" required autocomplete="family-name" />
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label for="phone_code">Phone Country Code *</label>
+            <select id="phone_code" name="phone_code" required>
+              <option value="">Select code</option>
+              <option value="+1">United States (+1)</option>
+              <option value="+44">United Kingdom (+44)</option>
+              <option value="+61">Australia (+61)</option>
+              <option value="+91">India (+91)</option>
+              <option value="+27">South Africa (+27)</option>
+              <option value="+971">UAE (+971)</option>
+            </select>
+          </div>
+          <div>
+            <label for="phone">Phone Number *</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" />
+          </div>
+          <div>
+            <label for="business_name">Business Name</label>
+            <input id="business_name" name="business_name" type="text" autocomplete="organization" />
+          </div>
+          <div>
+            <label for="website">Website</label>
+            <input id="website" name="website" type="url" placeholder="https://" autocomplete="url" />
+          </div>
+          <div class="full-width">
+            <label for="enquiry">Enquiry *</label>
+            <textarea id="enquiry" name="enquiry" rows="6" required placeholder="Tell us what you need help with..."></textarea>
+          </div>
+        </div>
+        <button class="btn" type="submit">Submit Enquiry</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> Tech4Growth. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
