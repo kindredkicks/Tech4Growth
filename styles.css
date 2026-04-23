@@ -321,6 +321,50 @@ textarea {
   color: var(--muted);
 }
 
+.find-us {
+  padding: 2rem 0 1rem;
+}
+
+.find-us h2 {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+}
+
+.find-us-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.7rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: var(--primary);
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--primary) 20%, var(--surface));
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 800;
 .social-badges {
   display: flex;
   flex-wrap: wrap;
